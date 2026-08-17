@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA | Modern Fashion</title>
+  <style>
+    /* CSS Reset & Variables */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --primary: #1a1a1a;
+      --accent: #d4af37;
+      --bg-light: #f9f9f9;
+      --text-muted: #666;
+      --border: #e0e0e0;
+    }
+
+    body {
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Layout Sections */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                  url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200') center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      background: #fff;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    /* Favorites Section */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .product-price {
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      background: var(--bg-light);
+      padding: 3rem;
+      border-radius: 8px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">AURA</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <div id="home" class="hero">
+    <h1>Elevate Your Style</h1>
+    <p>Discover the new seasonal collection designed for comfort and elegance.</p>
+    <br>
+    <a href="#favorites" class="btn">Explore Collection</a>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Aura</h2>
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800" alt="Fashion Workshop">
+      </div>
+      <div>
+        <h3>Crafting Timeless Elegance</h3>
+        <p>Founded in 2024, AURA blends minimalist aesthetics with sustainable fabrics. We believe fashion should empower individuals while respecting the planet.</p>
+        <br>
+        <p>Every piece in our store is ethically sourced, designed in-house, and tailored to provide a perfect balance of contemporary style and classic comfort.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Favorites Section -->
+  <section id="favorites">
+    <h2 class="section-title">Customer Favorites</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Minimalist Trench Coat">
+        <div class="product-info">
+          <h3>Minimalist Trench Coat</h3>
+          <p class="product-price">$185.00</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" alt="Silk Evening Dress">
+        <div class="product-info">
+          <h3>Silk Evening Dress</h3>
+          <p class="product-price">$210.00</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600" alt="Classic Leather Jacket">
+        <div class="product-info">
+          <h3>Classic Leather Jacket</h3>
+          <p class="product-price">$295.00</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-container">
+
+      <div>
+        <h3>Get in Touch</h3>
+        <p>Have questions about sizing, shipping, or returns? Drop us a message or visit our boutique.</p>
+        <br>
+        <p><strong>Address:</strong> 123 Fashion Blvd, Suite 400, New York, NY</p>
+        <p><strong>Email:</strong> support@aurafashion.com</p>
+        <p><strong>Phone:</strong> +1 (555) 019-2834</p>
+      </div>
+
+      <div class="contact-form">
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn" style="background: var(--primary); color: #fff;">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AURA Fashion Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
